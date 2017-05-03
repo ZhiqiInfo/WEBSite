@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>下载</title>
+    <!--<link href="Content/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/css/index.css" rel="stylesheet" />
+    <link href="Content/css/media.css" rel="stylesheet" />
+    <script src="Content/js/jquery-2.2.3.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/public.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" chrome="1" />
+</head>
+<body>
+    <!--头部导航-->
+    <header class="wrapper">
+        <!--banner-->
+        <div class="parallax po_re">
+            <div class="parallax_bg">
+                <img src="content/images/bg.png" class="img-responsive" />
+            </div>
+            <div class="container">
+                <!--头部-->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="left head_logo">
+                            <img src="Content/images/LOGO-WEB.png" />
+                        </div>
+                        <div class="left head_name">
+                            <div class="name_t">云间校园</div>
+                            <div class="name_b">CLOUPUS</div>
+                        </div>
+                    </div>
+                    <div class="right head_li col-md-8">
+                        <ul>
+                            <li>
+                                <a href="#" class="login">管理系统登录</a>
+                            </li>
+                            <li class="scheme">
+                                <a href="#">解决方案</a>
+                            </li>
+                            <li class="explain">
+                                <a href="#">使用说明</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--定位展示-->
+                <div id="head_nav">
+                    <div class="container">
+                        <div class="row">
+                            <div class="left col-md-3">
+                                <div class="left head_logo">
+                                    <img src="Content/images/LOGO-WEB.png" />
+                                </div>
+                                <div class="left head_name">
+                                    <div class="name_t">云间校园</div>
+                                    <div class="name_b">CLOUPUS</div>
+                                </div>
+                            </div>
+                            <div class="right head_li col-md-9">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="login">管理系统登录</a>
+                                    </li>
+                                    <li class="scheme">
+                                        <a href="#">解决方案</a>
+                                    </li>
+                                    <li class="explain">
+                                        <a href="#">使用说明</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--让每个高校都有自己的APP-->
+                <div class="bnr_title">
+                    <h2>
+                        让每个高校都有自己的APP
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--下载内容-->
+    <section id="shrink">
+        <!--展开更多-->
+        <div class="container download_title">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                    <ul id="Download_Tab" class="nav nav-pills row ">
+                        <li class="active col-md-5 col-xs-6">
+                            <a href="#IOS" data-toggle="tab">
+                                <i class="ios left"></i>
+                                IOS
+                            </a>
+                        </li>
+                        <li class="col-md-5 col-xs-6">
+                            <a href="#Android" data-toggle="tab">
+                                <i class="android left"></i>
+                                Android
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-right col-xs-11">
+                    <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="More" onclick="javascript:this.innerHTML=(this.innerHTML=='展开更多'?'收起更多':'展开更多');">展开更多</a>
+                </div>
+            </div>
+        </div>
+        <!--下载列表-->
+        <div class="container tab-content" id="Download_Content">
+            <!--IOS版下载内容-->
+            <div class="tab-pane fade in active" id="IOS">
+                <!--默认展开的一行-->
+                <div class="row fcn_list"></div>
+                <!--点击展开的-->
+                <div class="row fcn_list collapse" id="unfold"></div>
+            </div>
+            <!--Android版下载-->
+            <div class="tab-pane fade" id="Android">
+                <!--默认展开的一行-->
+                <div class="row fcn_list"></div>
+                <!--点击展开的-->
+                <div class="row fcn_list collapse" id="unfold"></div>
+            </div>
+        </div>
+    </section>
+    <!--底部-->
+    <footer class="footer download_footer">
+        <div class="container">
+            <div class="nav-tabs row">
+                <ul class="col-md-5 footer_left about">
+                    <li class="">
+                        <a href="#">关于云间校园</a><em>|</em>
+                    </li>
+                    <li class="">
+                        <a href="#">隐私协议</a><em>|</em>
+                    </li>
+                    <li class="">
+                        <a href="#">用户协议</a><em>|</em>
+                    </li>
+                </ul>
+                <ul class="col-md-4 col-xs-12 footer_left message">
+                    <li>
+                        <a href="#">Copyright © 2016~2017 志启信息科技</a>
+                    </li>
+                </ul>
+                <ul class="col-md-3 col-xs-12 footer_right contact">
+                    <li>
+                        <span>联系我们：</span>
+                    </li>
+                    <li>
+                        <img src="Content/images/microblog.png" />
+                        <img src="Content/images/wechat.png" />
+                        <img src="Content/images/e-mail.png" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+      
+        //功能特性列表循环
+        function ActionList(data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card_in"><div class="card_in_top"><div class="icon"><img src="' + data[i].Img + '"/></div><div class="content">' + data[i].Content + '</div></div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div><div class="card_in_hover"><div class="icon"><img src="' + data[i].ImgOn + '"/></div><div class="content">' + data[i].ContentOn + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].LookOn + '"/></div></div></div>')
+            }
+
+            $(".fcn_list > .col-lg-3").hover(function () {
+                $(this).find(".card_in").hide();
+                $(this).find(".card_in_hover").show();
+            }, function () {
+                $(this).find(".card_in").show();
+                $(this).find(".card_in_hover").hide();
+            });
+        }
+        function ActionList_on(data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $('#unfold').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card_in"><div class="card_in_top"><div class="icon"><img src="' + data[i].Img + '"/></div><div class="content">' + data[i].Content + '</div></div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div><div class="card_in_hover"><div class="icon"><img src="' + data[i].ImgOn + '"/></div><div class="content">' + data[i].ContentOn + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].LookOn + '"/></div></div></div>')
+            }
+
+            $(".fcn_list > .col-lg-3").hover(function () {
+                $(this).find(".card_in").hide();
+                $(this).find(".card_in_hover").show();
+            }, function () {
+                $(this).find(".card_in").show();
+                $(this).find(".card_in_hover").hide();
+            });
+        }
+
+
+
+
+
+        //功能特性列表模拟实现
+        var msg = [
+            { "Img": "Content/images/web-qj.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-sp.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-bx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-wx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+
+
+        ]
+        var msg_on = [
+            { "Img": "Content/images/web-zx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-kc.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-cz.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-jf.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-cx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-zl.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+            { "Img": "Content/images/web-tz.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
+
+
+        ]
+        window.addEventListener('load', function () {
+            ActionList(msg);
+        })
+        window.addEventListener('load', function () {
+            ActionList_on(msg_on);
+        })
+
+        
+    </script>
+</body>
+</html>
