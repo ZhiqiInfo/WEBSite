@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>下载</title>
+    <title>首页</title>
     <!--<link href="Content/css/bootstrap.min.css" rel="stylesheet" />-->
     <link href="Content/css/bootstrap.css" rel="stylesheet" />
     <link href="Content/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -15,91 +15,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" chrome="1" />
 </head>
 <body>
-    <!--头部导航-->
+    <!--背景banner-->
     <header class="wrapper">
-        <!--banner-->
-        <div class="parallax po_re">
-            <div class="parallax_bg">
-                <img src="content/images/bg.png" class="img-responsive" />
-            </div>
+        <!--导航开始-->
+        <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
             <div class="container">
-                <!--头部-->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="left head_logo">
-                            <img src="Content/images/LOGO-WEB.png" />
-                        </div>
-                        <div class="left head_name">
-                            <div class="name_t">云间校园</div>
-                            <div class="name_b">CLOUPUS</div>
-                        </div>
-                    </div>
-                    <div class="right head_li col-md-8">
-                        <ul>
-                            <li>
-                                <a href="#" class="login">管理系统登录</a>
-                            </li>
-                            <li class="scheme">
-                                <a href="#">解决方案</a>
-                            </li>
-                            <li class="explain">
-                                <a href="#">使用说明</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--定位展示-->
-                <div id="head_nav">
-                    <div class="container">
-                        <div class="row">
-                            <div class="left col-md-3">
-                                <div class="left head_logo">
-                                    <img src="Content/images/LOGO-WEB.png" />
-                                </div>
-                                <div class="left head_name">
-                                    <div class="name_t">云间校园</div>
-                                    <div class="name_b">CLOUPUS</div>
-                                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <div class="left">
+                            <div class="left head_logo">
+                                <img src="Content/images/LOGO-WEB.png" />
                             </div>
-                            <div class="right head_li col-md-9">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="login">管理系统登录</a>
-                                    </li>
-                                    <li class="scheme">
-                                        <a href="#">解决方案</a>
-                                    </li>
-                                    <li class="explain">
-                                        <a href="#">使用说明</a>
-                                    </li>
-                                </ul>
+                            <div class="left head_name">
+                                <div class="name_t">云间校园</div>
+                                <div class="name_b">CLOUPUS</div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <!--让每个高校都有自己的APP-->
-                <div class="bnr_title">
-                    <h2>
-                        让每个高校都有自己的APP
-                    </h2>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav right">
+                        <li class=""><a href="#">使用说明</a></li>
+                        <li><a href="#">解决方案</a></li>
+                        <li><a href="#" class="login">管理系统登录</a></li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+        <div class="bg"></div>
+        <!--导航结束-->
+        <!--让每个高校都有自己的APP-->
+
+        <div class="bnr_title">
+            <div class="container">
+                <h2>
+                    让每个高校都有自己的APP
+                </h2>
             </div>
         </div>
+
+
     </header>
     <!--下载内容-->
     <section id="shrink">
         <!--展开更多-->
         <div class="container download_title">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-xs-12">
+                <div class="col-md-6 col-md-offset-3 col-sm-9 col-xs-12">
                     <ul id="Download_Tab" class="nav nav-pills row ">
-                        <li class="active col-md-5 col-xs-6">
+                        <li class="active col-md-5 col-sm-6 col-xs-6">
                             <a href="#IOS" data-toggle="tab">
                                 <i class="ios left"></i>
                                 IOS
                             </a>
                         </li>
-                        <li class="col-md-5 col-xs-6">
+                        <li class="col-md-5 col-sm-6 col-xs-6">
                             <a href="#Android" data-toggle="tab">
                                 <i class="android left"></i>
                                 Android
@@ -107,7 +84,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-3 text-right col-xs-11">
+                <div class="col-md-3 col-sm-3 text-right col-xs-11">
                     <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="More" onclick="javascript:this.innerHTML=(this.innerHTML=='展开更多'?'收起更多':'展开更多');">展开更多</a>
                 </div>
             </div>
@@ -145,12 +122,12 @@
                         <a href="#">用户协议</a><em>|</em>
                     </li>
                 </ul>
-                <ul class="col-md-4 col-xs-12 footer_left message">
+                <ul class="col-md-4 col-xs-12 col-sm-7 footer_left message">
                     <li>
                         <a href="#">Copyright © 2016~2017 志启信息科技</a>
                     </li>
                 </ul>
-                <ul class="col-md-3 col-xs-12 footer_right contact">
+                <ul class="col-md-3 col-xs-12 col-sm-5 footer_right contact">
                     <li>
                         <span>联系我们：</span>
                     </li>

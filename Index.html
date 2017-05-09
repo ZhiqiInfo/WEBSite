@@ -15,77 +15,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" chrome="1" />
 </head>
 <body>
-    <!--头部导航-->
+    <!--背景banner-->
     <header class="wrapper">
-        <!--banner-->
-        <div class="parallax po_re">
-            <div class="parallax_bg">
-                <img src="content/images/bg.png" class="img-responsive" />
-            </div>
+        <!--导航开始-->
+        <nav class="navbar navbar-fixed-top my-navbar" role="navigation">
             <div class="container">
-                <!--头部-->
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="left head_logo">
-                            <img src="Content/images/LOGO-WEB.png" />
-                        </div>
-                        <div class="left head_name">
-                            <div class="name_t">云间校园</div>
-                            <div class="name_b">CLOUPUS</div>
-                        </div>
-                    </div>
-                    <div class="right head_li col-md-9">
-                        <ul>
-                            <li>
-                                <a href="#" class="login">管理系统登录</a>
-                            </li>
-                            <li class="scheme">
-                                <a href="#">解决方案</a>
-                            </li>
-                            <li class="explain">
-                                <a href="#">使用说明</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--定位展示-->
-                <div id="head_nav">
-                    <div class="container">
-                        <div class="row">
-                            <div class="left col-md-3">
-                                <div class="left head_logo">
-                                    <img src="Content/images/LOGO-WEB.png" />
-                                </div>
-                                <div class="left head_name">
-                                    <div class="name_t">云间校园</div>
-                                    <div class="name_b">CLOUPUS</div>
-                                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <div class="left">
+                            <div class="left head_logo">
+                                <img src="Content/images/LOGO-WEB.png" />
                             </div>
-                            <div class="right head_li col-md-9">
-                                <ul>
-                                    <li>
-                                        <a href="#" class="login">管理系统登录</a>
-                                    </li>
-                                    <li class="scheme">
-                                        <a href="#">解决方案</a>
-                                    </li>
-                                    <li class="explain">
-                                        <a href="#">使用说明</a>
-                                    </li>
-                                </ul>
+                            <div class="left head_name">
+                                <div class="name_t">云间校园</div>
+                                <div class="name_b">CLOUPUS</div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <!--让每个高校都有自己的APP-->
-                <div class="bnr_title">
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav right">
+                        <li class=""><a href="#">使用说明</a></li>
+                        <li><a href="#">解决方案</a></li>
+                        <li><a href="#" class="login">管理系统登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="bg"></div>
+        <!--导航结束-->
+        <!--让每个高校都有自己的APP-->
+        
+         <div class="bnr_title">
+                <div class="container">
                     <h2>
                         让每个高校都有自己的APP
                     </h2>
                     <a href="Download.html">立即下载</a>
                 </div>
-            </div>
         </div>
+
+
     </header>
     <!--功能特性-->
     <section class="container" id="shrink">
@@ -118,11 +95,11 @@
                         <div class="sign col-md-1 col-sm-1 col-xs-1">
                             <i></i>
                         </div>
-                        <div class="label col-md-11 col-sm-11 col-xs-11">
+                        <div class="label col-md-11 col-sm-11 col-xs-10">
                             解决方案
                         </div>
                     </div>
-                    <ul class="solution_list clx" id="SchemeList"></ul>
+                    <ul class="solution_list clx row" id="SchemeList"></ul>
                 </div>
             </div>
         </div>
@@ -131,7 +108,7 @@
     <section class="download">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-4 col-xs-9">
                     <div class="title">
                         <img src="" />
                         <label>立即下载</label>
@@ -171,12 +148,12 @@
                         <a href="#">用户协议</a><em>|</em>
                     </li>
                 </ul>
-                <ul class="col-md-4 col-xs-12 footer_left message">
+                <ul class="col-md-4 col-xs-12 col-sm-7 footer_left message">
                     <li>
                         <a href="#">Copyright © 2016~2017 志启信息科技</a>
                     </li>
                 </ul>
-                <ul class="col-md-3 col-xs-12 footer_right contact">
+                <ul class="col-md-3 col-xs-12 col-sm-5 footer_right contact">
                     <li>
                         <span>联系我们：</span>
                     </li>
@@ -216,6 +193,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <script>
         //视频播放刷新
@@ -225,7 +203,7 @@
         //解决方案for
         var tmp = "";
         for (i = 0; i < 4; i++) {
-            tmp += '<li class="row">' + '<div class="dot col-md-1 col-sm-1 col-xs-1"><i></i></div>' + '<div class="col-md-11 col-sm-11 col-xs-11">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
+            tmp += '<li class="left">' + '<div class="dot col-md-1 col-xs-1"><i></i></div>' + '<div class="col-md-11 col-xs-10">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
         }
         document.getElementById("SchemeList").innerHTML = tmp;
 
@@ -235,7 +213,7 @@
             for (var i = 0; i < data.length; i++) {
                 $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div>')
             }
-            
+
         }
         function ActionList_on(data) {
             for (var i = 0; i < data.length; i++) {
@@ -263,7 +241,7 @@
 
         window.addEventListener('load', function () {
             ActionList(msg);
-        
+
         })
 
         window.addEventListener('load', function () {
