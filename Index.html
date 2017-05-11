@@ -30,13 +30,7 @@
                     </button>
                     <a class="navbar-brand" href="#">
                         <div class="left">
-                            <div class="left head_logo">
-                                <img src="Content/images/LOGO-WEB.png" />
-                            </div>
-                            <div class="left head_name">
-                                <div class="name_t">云间校园</div>
-                                <div class="name_b">CLOUPUS</div>
-                            </div>
+                            <div class="left head_logo"></div>
                         </div>
                     </a>
                 </div>
@@ -66,12 +60,12 @@
     </header>
     <!--功能特性-->
     <section class="container" id="shrink">
-        <div class="fcn_title">
-            <div class="left">
-                <img src="Content/images/LOGO-WEB.png" class="left" />
-                <span class="left">功能特性</span>
+        <div class="fcn_title row">
+            <div class="col-lg-3 col-md-3">
+                <img src="Content/images/gntx.png" />
+                <span class="text">功能特性</span>
             </div>
-            <div class="right">
+            <div class="col-lg-9 col-md-9 text-right">
                 <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="More" onclick="javascript:this.innerHTML=(this.innerHTML=='展开更多'?'收起更多':'展开更多');">展开更多</a>
             </div>
         </div>
@@ -91,14 +85,12 @@
                 </div>
                 <!--文字-->
                 <div class="col-md-7 col-sm-12 col-md-pull-5 mar_t">
-                    <div class="row">
-                        <div class="sign col-md-1 col-sm-1 col-xs-1">
-                            <i></i>
+                   
+                        <div class="sign">
+                            <img src="Content/images/jjfa.png" />
+                            <span class="text">解决方案</span>
                         </div>
-                        <div class="label col-md-11 col-sm-11 col-xs-10">
-                            解决方案
-                        </div>
-                    </div>
+                    
                     <ul class="solution_list clx row" id="SchemeList"></ul>
                 </div>
             </div>
@@ -108,18 +100,22 @@
     <section class="download">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-4 col-xs-9">
-                    <div class="title">
-                        <img src="" />
+                <div class="col-md-3 col-sm-4 col-xs-9 title">
+                    <div class="">
+                        <img src="Content/images/ljxz.png" />
                         <label>立即下载</label>
                     </div>
                 </div>
+                
+
+                </div>
+            <div class="row">
                 <div class="col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 download_class">
                     <div class="row">
                         <div class="col-md-6 col-xs-6">
                             <img src="Content/images/web-ios.png" />
                             <h4>
-                                IOS版
+                                iOS版
                             </h4>
                         </div>
                         <div class="col-md-6 col-xs-6">
@@ -203,7 +199,7 @@
         //解决方案for
         var tmp = "";
         for (i = 0; i < 4; i++) {
-            tmp += '<li class="left">' + '<div class="dot col-md-1 col-xs-1"><i></i></div>' + '<div class="col-md-11 col-xs-10">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
+            tmp += '<li class="left">' + '<div class="dot col-md-1 col-xs-1"><i></i></div>' + '<div class="col-md-10 col-xs-10">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
         }
         document.getElementById("SchemeList").innerHTML = tmp;
 

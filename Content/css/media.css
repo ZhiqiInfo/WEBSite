@@ -87,7 +87,7 @@
     .solution{padding-bottom:30px;}
     .download{display:none;}
     .footer{line-height:50px;}
-    .footer .about{display:none;}
+    .footer .about,.footer .contact{display:none;}
     .download_title .more{margin-top:15px;}
     #Download_Tab li a{height:70px;line-height:50px;padding-top:10px;}
     .nav-pills > li > a[href="#IOS"] i, .nav-pills > li > a[href="#Android"] i{margin-top:0;}
