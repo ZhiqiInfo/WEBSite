@@ -66,14 +66,14 @@
                 <span class="text">功能特性</span>
             </div>
             <div class="col-lg-9 col-md-9 text-right">
-                <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="More" onclick="javascript:this.innerHTML=(this.innerHTML=='展开更多'?'收起更多':'展开更多');">展开更多</a>
+                <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="Flexible" onclick="javascript: this.innerHTML = (this.innerHTML == '收起更多' ? '展开更多' : '收起更多');">收起更多</a>
             </div>
         </div>
         <div class="row fcn_list">
 
         </div>
         <!--展开更多-->
-        <div class="row fcn_list collapse" id="unfold"></div>
+        <!--<div class="row fcn_list collapse" id="unfold"></div>-->
     </section>
     <!--解决方案-->
     <section class="solution">
@@ -162,76 +162,75 @@
             </div>
         </div>
     </footer>
-    <!--视频播放-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-         aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close videoClose"
-                            data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        请假申请
-                    </h4>
-                </div>
-                <div class="modal-body">
-                    <video controls="controls">
-                        <source src="Content/images/china.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default videoClose"
-                            data-dismiss="modal">
-                        关闭
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    </div>
     <script>
-        //视频播放刷新
-        $(".videoClose").click(function () {
+        function videoClose() {
             window.location.reload();
-        })
-        //解决方案for
-        var tmp = "";
-        for (i = 0; i < 4; i++) {
-            tmp += '<li class="left">' + '<div class="dot col-md-1 col-xs-1"><i></i></div>' + '<div class="col-md-10 col-xs-10">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
         }
-        document.getElementById("SchemeList").innerHTML = tmp;
+        
+        //解决方案for
+        //var tmp = "";
+        //for (i = 0; i < 4; i++) {
+        //    tmp += '<li class="left">' + '<div class="dot col-md-1 col-xs-1"><i></i></div>' + '<div class="col-md-10 col-xs-10">' + '以客户应用为导向的IT销售项目中，纷享销客的销售管理系统对能够销售项目各个阶段进程及周期进行全程把控，提高销售效率' + '</div>' + '</li>';
+        //}
+        //document.getElementById("SchemeList").innerHTML = tmp;
+        //解决方案for
+        function Program(data) {
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                $('.solution_list').append('<li class="left"><div class="dot col-md-1 col-xs-1"><i>' + '</i></div>' + '<div class="col-md-10 col-xs-10">' + data[i].Content + '</div></li>')
+            }
+        }
+        var list = [
+            {"Content":"针对民办高等院校提供定制化的移动行政办公解决方案，实现智慧校园互联网一体化的校园角色互动。"},
+            {"Content":"以方便学生校园生活，提高老师教学质量，方便校方统一管理为目的。提供包括‘审批流程、缴费流程、及新生入学等主体系统。"},
+            {"Content":"为了针对不同高校的独特需求，我们提供定制化功能开发，方便校方更快适应的发展。"},
+        ]
+        window.addEventListener('load', function () {
+            Program(list);
+        })
 
         //功能特性列表循环
         function ActionList(data) {
             console.log(data);
             for (var i = 0; i < data.length; i++) {
-                $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div>')
+                $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6 fcn_listdiv"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal' + i + '" value="' + data[i].Look + '"/></div><div class="modal fade" id="myModal' + i + '" tabindex="-1" role="dialog"aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close videoClose"data-dismiss="modal" aria-hidden="true" onclick="videoClose()">&times;</button><h4 class="modal-title" id="myModalLabel">' + data[i].Type + '</h4></div><div class="modal-body"><video controls="controls"><source src="' + data[i].Video + '" /></video></div><div class="modal-footer"><button type="button" class="btn btn-default videoClose"data-dismiss="modal" onclick="videoClose()">关闭</button></div></div></div></div></div>')
             }
 
         }
-        function ActionList_on(data) {
-            for (var i = 0; i < data.length; i++) {
-                $('#unfold').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div>')
-            }
-        }
+        
+
+
+
+
+
+        //function ActionList_on(data) {
+        //    for (var i = 0; i < data.length; i++) {
+        //        $('#unfold').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div>')
+        //    }
+        //}
         //功能特性列表模拟实现
         var msg = [
-            { "Type": "请假申请", "Img": "Content/images/web-qj.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "审批申请", "Img": "Content/images/web-sp.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "报修申请", "Img": "Content/images/web-bx.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "维修申请", "Img": "Content/images/web-wx.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
+            { "Type": "请假申请", "Img": "Content/images/web-qj.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明","Video":"1" },
+            { "Type": "请假审批", "Img": "Content/images/web-sp.png", "Content": "请假流程实时掌握一键批示", "Look": "操作说明", "Video": "2" },
+            { "Type": "报修申请", "Img": "Content/images/web-bx.png", "Content": "故障申报图片上传清晰明了", "Look": "操作说明", "Video": "3" },
+            { "Type": "保修受理", "Img": "Content/images/web-wx.png", "Content": "查询情况分配调度效率维修", "Look": "操作说明", "Video": "4" },
+            { "Type": "校园资讯", "Img": "Content/images/web-zx.png", "Content": "校园资讯最新动态实时掌握", "Look": "操作说明", "Video": "Content/images/mp4/video5.mp4" },
+            { "Type": "课程表", "Img": "Content/images/web-kc.png", "Content": "课程查询实时更新自在掌握", "Look": "操作说明", "Video": "Content/images/mp4/video6.mp4" },
+            { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "问题反馈密码修改一键指引", "Look": "操作说明", "Video": "7" },
+            { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "学杂书费校园费用充值查询", "Look": "操作说明", "Video": "8" },
+            { "Type": "成绩查询", "Img": "Content/images/web-cx.png", "Content": "考试成绩年度总评在线查询", "Look": "操作说明", "Video": "Content/images/mp4/video9.mp4" },
+            { "Type": "失物招领", "Img": "Content/images/web-zl.png", "Content": "失物招领互助互动和谐校园", "Look": "操作说明", "Video": "Content/images/mp4/video10.mp4" },
+            { "Type": "通知中心", "Img": "Content/images/web-tz.png", "Content": "校方动向重要通知一键同步", "Look": "操作说明", "Video": "Content/images/mp4/video11.mp4" },
         ]
-        var msg_on = [
-            { "Type": "校园资讯", "Img": "Content/images/web-zx.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "课程表", "Img": "Content/images/web-kc.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "成绩查询", "Img": "Content/images/web-cx.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "失物招领", "Img": "Content/images/web-zl.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-            { "Type": "通知中心", "Img": "Content/images/web-tz.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明" },
-        ]
+        //var msg_on = [
+        //    { "Type": "校园资讯", "Img": "Content/images/web-zx.png", "Content": "校园资讯最新动态实时掌握", "Look": "操作说明", "Video": "5" },
+        //    { "Type": "课程表", "Img": "Content/images/web-kc.png", "Content": "课程查询实时更新自在掌握", "Look": "操作说明", "Video": "6" },
+        //    { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "问题反馈密码修改一键指引", "Look": "操作说明", "Video": "7" },
+        //    { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "学杂书费校园费用充值查询", "Look": "操作说明", "Video": "8" },
+        //    { "Type": "成绩查询", "Img": "Content/images/web-cx.png", "Content": "考试成绩年度总评在线查询", "Look": "操作说明", "Video": "Content/images/mp4/video9.mp4" },
+        //    { "Type": "失物招领", "Img": "Content/images/web-zl.png", "Content": "失物招领互助互动和谐校园", "Look": "操作说明", "Video": "10" },
+        //    { "Type": "通知中心", "Img": "Content/images/web-tz.png", "Content": "校方动向重要通知一键同步", "Look": "操作说明", "Video": "11" },
+        //]
 
 
 
@@ -240,9 +239,9 @@
 
         })
 
-        window.addEventListener('load', function () {
-            ActionList_on(msg_on);
-        })
+        //window.addEventListener('load', function () {
+        //    ActionList_on(msg_on);
+        //})
 
     </script>
 

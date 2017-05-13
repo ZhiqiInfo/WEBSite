@@ -16,17 +16,17 @@
 }*/
 /*>=992的设备*/
 @media (min-width:992px) {
-    .scheme_img img{margin-top:50%;}
+    .scheme_img img{margin-top:30%;}
    
 
 }
 /*>=1200的设备*/ 
 @media (min-width:1200px) {
-    .scheme_img img{margin-top:50%;}
+    .scheme_img img{margin-top:30%;}
 }
 /*>=1310的设备*/ 
 @media (min-width:1310px) {
-   .scheme_img img{margin-top:50%;}
+   .scheme_img img{margin-top:30%;}
 }
 
 

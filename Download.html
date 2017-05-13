@@ -79,7 +79,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3 text-right col-xs-11">
-                    <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="More" onclick="javascript:this.innerHTML=(this.innerHTML=='展开更多'?'收起更多':'展开更多');">展开更多</a>
+                    <a type="button" class="more Flexible" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="Flexible" onclick="javascript: this.innerHTML = (this.innerHTML == '收起更多' ? '展开更多' : '收起更多');">收起更多</a>
                 </div>
             </div>
         </div>
@@ -87,17 +87,11 @@
         <div class="container tab-content" id="Download_Content">
             <!--IOS版下载内容-->
             <div class="tab-pane fade in active" id="IOS">
-                <!--默认展开的一行-->
                 <div class="row fcn_list"></div>
-                <!--点击展开的-->
-                <div class="row fcn_list collapse" id="unfold"></div>
             </div>
             <!--Android版下载-->
             <div class="tab-pane fade" id="Android">
-                <!--默认展开的一行-->
                 <div class="row fcn_list"></div>
-                <!--点击展开的-->
-                <div class="row fcn_list collapse" id="unfold"></div>
             </div>
         </div>
     </section>
@@ -141,7 +135,7 @@
         function ActionList(data) {
             console.log(data);
             for (var i = 0; i < data.length; i++) {
-                $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card_in"><div class="card_in_top"><div class="icon"><img src="' + data[i].Img + '"/></div><div class="content">' + data[i].Content + '</div></div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div><div class="card_in_hover"><div class="icon"><img src="' + data[i].ImgOn + '"/></div><div class="content">' + data[i].ContentOn + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].LookOn + '"/></div></div></div>')
+                $('.fcn_list').append('<div class="col-lg-3 col-md-6 col-sm-6 fcn_listdiv"><div class="card_in"><div class="card_in_top"><div class="icon"><img src="' + data[i].Img + '"/></div><div class="content">' + data[i].Content + '</div></div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div><div class="card_in_hover"><div class="icon"><img src="' + data[i].ImgOn + '"/></div><div class="content">' + data[i].ContentOn + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].LookOn + '"/></div></div></div>')
             }
 
             $(".fcn_list > .col-lg-3").hover(function () {
@@ -152,23 +146,6 @@
                 $(this).find(".card_in_hover").hide();
             });
         }
-        function ActionList_on(data) {
-            console.log(data);
-            for (var i = 0; i < data.length; i++) {
-                $('#unfold').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card_in"><div class="card_in_top"><div class="icon"><img src="' + data[i].Img + '"/></div><div class="content">' + data[i].Content + '</div></div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div><div class="card_in_hover"><div class="icon"><img src="' + data[i].ImgOn + '"/></div><div class="content">' + data[i].ContentOn + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].LookOn + '"/></div></div></div>')
-            }
-
-            $(".fcn_list > .col-lg-3").hover(function () {
-                $(this).find(".card_in").hide();
-                $(this).find(".card_in_hover").show();
-            }, function () {
-                $(this).find(".card_in").show();
-                $(this).find(".card_in_hover").hide();
-            });
-        }
-
-
-
 
 
         //功能特性列表模拟实现
@@ -177,10 +154,6 @@
             { "Img": "Content/images/web-sp.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
             { "Img": "Content/images/web-bx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
             { "Img": "Content/images/web-wx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
-
-
-        ]
-        var msg_on = [
             { "Img": "Content/images/web-zx.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
             { "Img": "Content/images/web-kc.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
             { "Img": "Content/images/web-cz.png", "Content": "广东工商学院", "Look": "操作说明", "ImgOn": "Content/images/web-qj.png", "ContentOn": "扫描二维码下载到手机", "LookOn": "点击下载" },
@@ -193,9 +166,6 @@
         ]
         window.addEventListener('load', function () {
             ActionList(msg);
-        })
-        window.addEventListener('load', function () {
-            ActionList_on(msg_on);
         })
 
         
