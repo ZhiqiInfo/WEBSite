@@ -61,11 +61,11 @@
     <!--功能特性-->
     <section class="container" id="shrink">
         <div class="fcn_title row">
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-3 col-md-3 col-xs-6">
                 <img src="Content/images/gntx.png" />
                 <span class="text">功能特性</span>
             </div>
-            <div class="col-lg-9 col-md-9 text-right">
+            <div class="col-lg-9 col-md-9 text-right col-xs-6">
                 <a type="button" class="more" data-toggle="collapse" data-parent="#shrink" href="#unfold" id="Flexible" onclick="javascript: this.innerHTML = (this.innerHTML == '收起更多' ? '展开更多' : '收起更多');">收起更多</a>
             </div>
         </div>
@@ -197,52 +197,25 @@
             }
 
         }
-        
-
-
-
-
-
-        //function ActionList_on(data) {
-        //    for (var i = 0; i < data.length; i++) {
-        //        $('#unfold').append('<div class="col-lg-3 col-md-6 col-sm-6"><div class="card"><div class="title">' + data[i].Type + '</div><div class="icon"><img src="' + data[i].Img + '"/><div class="content">' + data[i].Content + '</div><div class="btn"><input type="button" data-toggle="modal" data-target="#myModal" value="' + data[i].Look + '"/></div></div>')
-        //    }
-        //}
         //功能特性列表模拟实现
         var msg = [
-            { "Type": "请假申请", "Img": "Content/images/web-qj.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明","Video":"1" },
-            { "Type": "请假审批", "Img": "Content/images/web-sp.png", "Content": "请假流程实时掌握一键批示", "Look": "操作说明", "Video": "2" },
-            { "Type": "报修申请", "Img": "Content/images/web-bx.png", "Content": "故障申报图片上传清晰明了", "Look": "操作说明", "Video": "3" },
-            { "Type": "保修受理", "Img": "Content/images/web-wx.png", "Content": "查询情况分配调度效率维修", "Look": "操作说明", "Video": "4" },
+            { "Type": "请假申请", "Img": "Content/images/web-qj.png", "Content": "轻松请假日常调休手机一键搞定", "Look": "操作说明"},
+            { "Type": "请假审批", "Img": "Content/images/web-sp.png", "Content": "请假流程实时掌握一键批示", "Look": "操作说明" },
+            { "Type": "报修申请", "Img": "Content/images/web-bx.png", "Content": "故障申报图片上传清晰明了", "Look": "操作说明" },
+            { "Type": "保修受理", "Img": "Content/images/web-wx.png", "Content": "查询情况分配调度效率维修", "Look": "操作说明" },
             { "Type": "校园资讯", "Img": "Content/images/web-zx.png", "Content": "校园资讯最新动态实时掌握", "Look": "操作说明", "Video": "Content/images/mp4/video5.mp4" },
             { "Type": "课程表", "Img": "Content/images/web-kc.png", "Content": "课程查询实时更新自在掌握", "Look": "操作说明", "Video": "Content/images/mp4/video6.mp4" },
-            { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "问题反馈密码修改一键指引", "Look": "操作说明", "Video": "7" },
-            { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "学杂书费校园费用充值查询", "Look": "操作说明", "Video": "8" },
+            { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "问题反馈密码修改一键指引", "Look": "操作说明" },
+            { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "学杂书费校园费用充值查询", "Look": "操作说明" },
             { "Type": "成绩查询", "Img": "Content/images/web-cx.png", "Content": "考试成绩年度总评在线查询", "Look": "操作说明", "Video": "Content/images/mp4/video9.mp4" },
             { "Type": "失物招领", "Img": "Content/images/web-zl.png", "Content": "失物招领互助互动和谐校园", "Look": "操作说明", "Video": "Content/images/mp4/video10.mp4" },
             { "Type": "通知中心", "Img": "Content/images/web-tz.png", "Content": "校方动向重要通知一键同步", "Look": "操作说明", "Video": "Content/images/mp4/video11.mp4" },
         ]
-        //var msg_on = [
-        //    { "Type": "校园资讯", "Img": "Content/images/web-zx.png", "Content": "校园资讯最新动态实时掌握", "Look": "操作说明", "Video": "5" },
-        //    { "Type": "课程表", "Img": "Content/images/web-kc.png", "Content": "课程查询实时更新自在掌握", "Look": "操作说明", "Video": "6" },
-        //    { "Type": "帮助中心", "Img": "Content/images/web-cz.png", "Content": "问题反馈密码修改一键指引", "Look": "操作说明", "Video": "7" },
-        //    { "Type": "自助缴费", "Img": "Content/images/web-jf.png", "Content": "学杂书费校园费用充值查询", "Look": "操作说明", "Video": "8" },
-        //    { "Type": "成绩查询", "Img": "Content/images/web-cx.png", "Content": "考试成绩年度总评在线查询", "Look": "操作说明", "Video": "Content/images/mp4/video9.mp4" },
-        //    { "Type": "失物招领", "Img": "Content/images/web-zl.png", "Content": "失物招领互助互动和谐校园", "Look": "操作说明", "Video": "10" },
-        //    { "Type": "通知中心", "Img": "Content/images/web-tz.png", "Content": "校方动向重要通知一键同步", "Look": "操作说明", "Video": "11" },
-        //]
-
-
 
         window.addEventListener('load', function () {
             ActionList(msg);
 
         })
-
-        //window.addEventListener('load', function () {
-        //    ActionList_on(msg_on);
-        //})
-
     </script>
 
 </body>
