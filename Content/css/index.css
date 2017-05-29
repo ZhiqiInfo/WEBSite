@@ -58,8 +58,6 @@ fieldset,address{font-size:inherit;border:0;}
 .my-navbar a {background: transparent !important;color: #fff !important;}
 .my-navbar a:hover {color: #45bcf9 !important;background: transparent;outline: 0;}
 .my-navbar a {transition: color 0.5s ease-in-out;}
-
-/*button.navbar-toggle {background-color: #fbfbfb;}*/
 /*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
 button.navbar-toggle > span.icon-bar {background-color: #dedede;}
 .navbar .head_logo{background:url(../images/logo.png) no-repeat;width: 120px;height:40px;}
@@ -78,7 +76,7 @@ button.navbar-toggle > span.icon-bar {background-color: #dedede;}
 .navbar-brand{padding:8px 15px;}
 .navbar-fixed-top{border-width:0px;}
 .navbar-brand, .navbar-nav > li > a{text-shadow: 0 0px 0 rgba(255,255,255,.25);}
-.top-nav {padding:15px 0;background: #fff;box-shadow:0 0 4px rgba(0,0,0,.3)}
+.top-nav {padding:15px 0;background: #fff;box-shadow:0 0 4px rgba(0,0,0,.3);display:none;}
 .top-nav a{color: #2C353E !important;}
 .top-nav .nav > li > a.login{background:none !important;border:1px solid #0072c6;color:#2C353E !important;padding:8px 21px;}
 .top-nav .head_logo{background:url(../images/logo_on.png) no-repeat;width: 120px;height:40px;}

@@ -64,19 +64,23 @@
 
 
 /*4*/
-@media only screen and (max-device-width :480px){
-
+@media (min-device-width : 320px) and (max-device-width : 480px){
+    .modal-body video{height:308px;}
 }
 /*5*/
 @media (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-min-device-pixel-ratio : 2) {
     .bg{height:350px;}
     .navbar-brand{padding:5px 15px;}
-    .navbar{padding:5px 0px;}
+    .navbar{padding:5px 0px;background-color:#fff;}
+    /*.my-navbar{padding:15px 0;background: #fff;box-shadow:0 0 4px rgba(0,0,0,.3);}*/
+    .navbar .head_logo{background:url(../images/logo_on.png) no-repeat;width: 120px;height:40px;}
+    .my-navbar a {color: #2C353E !important;}
+    .nav > li > a.login{margin-left:0;margin-right:10px;}
     .bnr_title{top:100px;}
-    .head_name .name_t{font-size:16px;font-size:1.6rem;}
+    .head_name .name_t,.fcn_title > div > span.text, .sign span.text{font-size:16px;font-size:1.6rem;}
     .bnr_title h2,.download .title > label,.nav-pills > li > a{font-size:20px;font-size:2rem;}
     .bnr_title a{font-size:14px;font-size:1.4rem;}
-    .fcn_title > .left img{width:30px;height:30px;}
+    .fcn_title > .left img,.fcn_title > div > img,.solution .sign img{width:30px;height:30px;}
     .fcn_list{margin-top:15px;}
     .fcn_title > .left span{font-size:20px;font-size:2rem;margin-left:10px;padding:1px 0px;}
     .more{font-size:14px;font-size:1.4rem;padding:5px 10px;}
@@ -91,12 +95,16 @@
     .download_title .more{margin-top:15px;}
     #Download_Tab li a{height:70px;line-height:50px;padding-top:10px;}
     .nav-pills > li > a[href="#IOS"] i, .nav-pills > li > a[href="#Android"] i{margin-top:0;}
-
+    .modal-dialog{width:auto;}
+    .modal-body video{height:398px;}
+    .fcn_title > div > span.text, .sign span.text{margin-left:10px;}
 }
 /*6*/
 @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
     .bnr_title h2{font-size:22px;font-size:2.2em;}
     .bnr_title a{font-size:16px;font-size:1.6rem;}
+    .modal-body video{height:497px;}
+   
 
 }
 
@@ -104,6 +112,7 @@
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){ 
     .bnr_title h2{font-size:24px;font-size:2.4em;}
     .bnr_title a{font-size:18px;font-size:1.8rem;}
+    .modal-body video{height:566px;}
 }
 
 /*ipad+*/
@@ -112,7 +121,8 @@
     .footer .about{display:none;}
     .scheme_img img{margin:10% 0;}
     .bnr_title h2{font-size:40px;font-size:4rem;}
-
+     .modal-dialog{width:auto;}
+    .modal-body video{height:816px;}
 
 }
 
